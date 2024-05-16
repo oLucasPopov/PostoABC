@@ -102,6 +102,22 @@
             <Form>frmPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UI\untCadAbastecimento.pas">
+            <Form>frmCadAbastecimento</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="DataModules\untDmConnection.pas">
+            <Form>dmConnection</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Controllers\untControllerNovoAbastecimento.pas"/>
+        <DCCReference Include="Models\untModelsAbastecimento.pas"/>
+        <DCCReference Include="Repositories\untRepositoriosNovoAbastecimento.pas"/>
+        <DCCReference Include="Helpers\untHelpersConversao.pas"/>
+        <DCCReference Include="Helpers\untHelpersDB.pas"/>
+        <DCCReference Include="Helpers\untHelpersFormatacao.pas"/>
+        <DCCReference Include="Helpers\untHelpersMensagem.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
