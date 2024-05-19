@@ -24,7 +24,6 @@ type
     qryVendasDEDUCAO_IMPOSTO: TFMTBCDField;
     qryVendasTOTAL_LIQUIDO: TFMTBCDField;
     qryVendasDATAHORA_TRANSACAO: TSQLTimeStampField;
-    procedure qryVendasBeforeDelete(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -37,10 +36,5 @@ var
 implementation
 
 {$R *.dfm}
-
-procedure TfrmHistoricoAbastecimentos.qryVendasBeforeDelete(DataSet: TDataSet);
-begin
-//
-end;
 
 end.

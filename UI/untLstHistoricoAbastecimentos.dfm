@@ -99,7 +99,6 @@ object frmHistoricoAbastecimentos: TfrmHistoricoAbastecimentos
   end
   object qryVendas: TFDQuery
     Active = True
-    BeforeDelete = qryVendasBeforeDelete
     Connection = dmConnection.connection
     SQL.Strings = (
       'select vc.ID'
