@@ -118,6 +118,14 @@
         <DCCReference Include="Helpers\untHelpersDB.pas"/>
         <DCCReference Include="Helpers\untHelpersFormatacao.pas"/>
         <DCCReference Include="Helpers\untHelpersMensagem.pas"/>
+        <DCCReference Include="UI\untRelHistoricoAbastecimentosAgrupado.pas">
+            <Form>frmRelHistoricoAbastecimentosAgrupado</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UI\untSelecionarPeriodo.pas">
+            <Form>frmSelecionarPeriodo</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

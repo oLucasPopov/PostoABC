@@ -11,7 +11,9 @@ uses
   untHelpersConversao in 'Helpers\untHelpersConversao.pas',
   untHelpersDB in 'Helpers\untHelpersDB.pas',
   untHelpersFormatacao in 'Helpers\untHelpersFormatacao.pas',
-  untHelpersMensagem in 'Helpers\untHelpersMensagem.pas';
+  untHelpersMensagem in 'Helpers\untHelpersMensagem.pas',
+  untRelHistoricoAbastecimentosAgrupado in 'UI\untRelHistoricoAbastecimentosAgrupado.pas' {frmRelHistoricoAbastecimentosAgrupado},
+  untSelecionarPeriodo in 'UI\untSelecionarPeriodo.pas' {frmSelecionarPeriodo};
 
 {$R *.res}
 
@@ -20,5 +22,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TdmConnection, dmConnection);
+  Application.CreateForm(TfrmSelecionarPeriodo, frmSelecionarPeriodo);
   Application.Run;
 end.
