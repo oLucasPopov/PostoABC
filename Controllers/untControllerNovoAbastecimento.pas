@@ -1,7 +1,7 @@
 unit untControllerNovoAbastecimento;
 
 interface
-uses System.SysUtils, untModelsAbastecimento, untHelpersMensagem, untRepositoriosNovoAbastecimento;
+uses System.SysUtils, untModelsAbastecimento, untRepositoriosNovoAbastecimento;
 
 type
 TControllerNovoAbastecimento = class

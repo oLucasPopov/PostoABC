@@ -4,11 +4,12 @@ interface
 
 uses
   System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
-  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
-  Data.DB, FireDAC.Comp.Client, FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef,
-  FireDAC.Stan.ExprFuncs, Data.DbxSqlite, Data.SqlExpr, FireDAC.Phys.FB,
-  FireDAC.Phys.FBDef, untSelecionarBD, untHelpersConfigIni, untHelpersMensagem;
+  Data.DB, FireDAC.Comp.Client, FireDAC.Phys.SQLite,
+  FireDAC.Stan.ExprFuncs, Data.DbxSqlite, FireDAC.Phys.FB,
+  untSelecionarBD, untHelpersConfigIni, untHelpersMensagem, FireDAC.Phys.Intf,
+  FireDAC.Phys.FBDef;
 
 type
   TdmConnection = class(TDataModule)
