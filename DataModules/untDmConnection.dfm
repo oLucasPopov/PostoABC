@@ -1,17 +1,19 @@
 object dmConnection: TdmConnection
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
   Height = 150
   Width = 294
   object connection: TFDConnection
     Params.Strings = (
       
         'Database=C:\Users\lucas\Documents\Embarcadero\Studio\Projects\Po' +
-        'stoABC2\bd\POSTO.FDB'
+        'stoABC\bd\POSTO.FDB'
       'User_Name=sysdba'
       'Password=123456789'
       'DriverID=FB')
     ConnectedStoredUsage = [auRunTime]
-    Connected = True
+    Connected = False
+    LoginPrompt = False
     Left = 32
     Top = 56
   end
