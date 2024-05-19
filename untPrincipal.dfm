@@ -3,7 +3,7 @@ object frmPrincipal: TfrmPrincipal
   Top = 0
   Caption = 'Posto de Gasolinas ABC'
   ClientHeight = 252
-  ClientWidth = 537
+  ClientWidth = 607
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -40,5 +40,14 @@ object frmPrincipal: TfrmPrincipal
     Caption = 'Alterar Pre'#231'os'
     TabOrder = 2
     OnClick = btnAlterarPrecosClick
+  end
+  object btnHistoricoAbastecimentos: TButton
+    Left = 408
+    Top = 8
+    Width = 193
+    Height = 57
+    Caption = 'Hist'#243'rico de Abastecimentos'
+    TabOrder = 3
+    OnClick = btnHistoricoAbastecimentosClick
   end
 end
