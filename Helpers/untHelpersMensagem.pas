@@ -11,6 +11,7 @@ type
     class function MensagemSimNao(cMensagem: String): boolean;
     class procedure MensagemErro(cTitulo: string; E: Exception);
     class procedure Mensagem(cTitulo, cMensagem: string);
+    class procedure MensagemOK(cTitulo, cMensagem: string);
   end;
 
 implementation
@@ -25,6 +26,11 @@ end;
 class procedure TMensagemHelper.MensagemErro(cTitulo: string; E: Exception);
 begin
   Application.MessageBox(PWideChar(E.Message), PWideChar(cTitulo), MB_ICONERROR + MB_OK);
+end;
+
+class procedure TMensagemHelper.MensagemOK(cTitulo, cMensagem: string);
+begin
+  Application.MessageBox(PWideChar(cMensagem), PWideChar(cTitulo), MB_ICONINFORMATION + MB_OK);
 end;
 
 class function TMensagemHelper.MensagemSimNao(cMensagem: String): boolean;
