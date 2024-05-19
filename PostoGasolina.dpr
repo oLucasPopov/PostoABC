@@ -16,7 +16,8 @@ uses
   untSelecionarPeriodo in 'UI\untSelecionarPeriodo.pas' {frmSelecionarPeriodo},
   untCadAlterarPrecos in 'UI\untCadAlterarPrecos.pas' {frmCadAlterarPrecos},
   untSelecionarBD in 'UI\untSelecionarBD.pas' {frmSelecionarBD},
-  untHelpersConfigIni in 'Helpers\untHelpersConfigIni.pas';
+  untHelpersConfigIni in 'Helpers\untHelpersConfigIni.pas',
+  untLstHistoricoAbastecimentos in 'UI\untLstHistoricoAbastecimentos.pas' {frmHistoricoAbastecimentos};
 
 {$R *.res}
 
@@ -25,5 +26,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TdmConnection, dmConnection);
+  Application.CreateForm(TfrmHistoricoAbastecimentos, frmHistoricoAbastecimentos);
   Application.Run;
 end.
