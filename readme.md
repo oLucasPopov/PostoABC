@@ -1,5 +1,8 @@
 # Configurando o Banco de Dados
 
+ - Versão do delphi utilizada: 10.3
+ - Versão do firebird utilizada: 5.0
+
 ### Criando o arquivo .fdb com o iSQL
 
 Ao abrir a ferramenta Firebird iSQL Tool, rodar o seguinte comando substituindo [caminho_disco_rigido]
