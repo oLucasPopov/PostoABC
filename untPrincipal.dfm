@@ -23,4 +23,13 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 0
     OnClick = btnCadastrarAbastecimentoClick
   end
+  object btnRelatorio: TButton
+    Left = 8
+    Top = 72
+    Width = 193
+    Height = 57
+    Caption = 'Relat'#243'rio por Per'#237'odo'
+    TabOrder = 1
+    OnClick = btnRelatorioClick
+  end
 end
