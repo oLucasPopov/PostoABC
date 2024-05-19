@@ -495,7 +495,6 @@ object frmRelHistoricoAbastecimentosAgrupado: TfrmRelHistoricoAbastecimentosAgru
     Top = 160
   end
   object qryRelatorio: TFDQuery
-    Active = True
     Connection = dmConnection.connection
     SQL.Strings = (
       'select dia_venda'
@@ -506,7 +505,7 @@ object frmRelHistoricoAbastecimentosAgrupado: TfrmRelHistoricoAbastecimentosAgru
       '      ,cast(total_liquido as numeric(18, 2)) as total_liquido '
       '  from movimentacao_vendas_agrupado'
       ' where dia_venda between :inicio and :fim'
-      '  order by dia_venda, descricao_tanque'
+      '  order by dia_venda, descricao_tanque, descricao_bomba'
       '')
     Left = 16
     Top = 208
