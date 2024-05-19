@@ -99,27 +99,31 @@ var
   NovoAbastecimento: TNovoAbastecimento;
   ControllerNovoAbastecimento: TControllerNovoAbastecimento;
 begin
+  ControllerNovoAbastecimento := TControllerNovoAbastecimento.Create;
   try
-    NovoAbastecimento.Gerar(cmbBomba.KeyValue.ToIntDef(-1)
-                           ,edtPreco.Text.toFloatLocale
-                           ,edtLitros.Text.toFloatLocale);
+    try
+      NovoAbastecimento.Gerar(cmbBomba.KeyValue.ToIntDef(-1)
+                             ,edtPreco.Text.toFloatLocale
+                             ,edtLitros.Text.toFloatLocale);
 
-    ControllerNovoAbastecimento.Cadastrar(NovoAbastecimento);
+      ControllerNovoAbastecimento.Cadastrar(NovoAbastecimento);
 
-    if not TMensagemHelper.MensagemSimNao(sucesso) then
-    begin
-      Self.OnCloseQuery := nil;
-      Self.Close;
+      if not TMensagemHelper.MensagemSimNao(sucesso) then
+      begin
+        Self.OnCloseQuery := nil;
+        Self.Close;
+      end;
+
+      LimparCampos;
+      cmbBomba.SetFocus;
+    except
+      on E:Exception do
+      begin
+        TMensagemHelper.MensagemErro('Erro ao cadastrar abastecimento', E);
+      end;
     end;
-
-
-    LimparCampos;
-    cmbBomba.SetFocus;
-  except
-    on E:Exception do
-    begin
-      TMensagemHelper.MensagemErro('Erro ao cadastrar abastecimento', E);
-    end;
+  finally
+    ControllerNovoAbastecimento.Free;
   end;
 end;
 
