@@ -11,6 +11,7 @@ object frmSelecionarBD: TfrmSelecionarBD
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   DesignSize = (
     447
     108)

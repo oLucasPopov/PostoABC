@@ -19,6 +19,7 @@ type
     btnSalvar: TButton;
     procedure btnSelecionarBDClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure SelecionarBD;
   public
@@ -72,6 +73,28 @@ end;
 procedure TfrmSelecionarBD.btnSelecionarBDClick(Sender: TObject);
 begin
   SelecionarBD;
+end;
+
+procedure TfrmSelecionarBD.FormCreate(Sender: TObject);
+var
+  configIni: TIniBD;
+begin
+  configIni := TIniBD.CriarIni;
+  try
+    try
+      edtCaminhoBD.Text := configIni.LerCaminhoBanco;
+      edtUsuarioBD.Text := configIni.LerUsuarioBanco;
+      edtSenhaBD.Text   := configIni.LerSenhaBanco;
+      Self.Close;
+    except
+      on E: Exception do
+      begin
+        TMensagemHelper.MensagemErro('Erro ao ler as configurações', E);
+      end;
+    end;
+  finally
+    configIni.Free;
+  end;
 end;
 
 end.
