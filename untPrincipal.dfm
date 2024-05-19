@@ -32,4 +32,13 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 1
     OnClick = btnRelatorioClick
   end
+  object btnAlterarPrecos: TButton
+    Left = 208
+    Top = 8
+    Width = 193
+    Height = 57
+    Caption = 'Alterar Pre'#231'os'
+    TabOrder = 2
+    OnClick = btnAlterarPrecosClick
+  end
 end
