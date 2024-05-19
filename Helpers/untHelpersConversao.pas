@@ -59,11 +59,8 @@ end;
 { TConvertString }
 
 class function TConvertString.toFloatLocale(valor: string): Real;
-var
-  formatSettings : TFormatSettings;
 begin
-  GetLocaleFormatSettings(LOCALE_SYSTEM_DEFAULT, formatSettings);
-  Result := StrToFloat(valor, formatSettings);
+  Result := StrToFloat(valor, TFormatSettings.Create(LOCALE_SYSTEM_DEFAULT));
 end;
 
 end.
