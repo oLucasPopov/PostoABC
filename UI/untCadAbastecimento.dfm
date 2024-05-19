@@ -69,7 +69,6 @@ object frmCadAbastecimento: TfrmCadAbastecimento
     Caption = 'Confirmar'
     TabOrder = 4
     OnClick = btnConfirmarClick
-    ExplicitTop = 64
   end
   object btnCancelar: TButton
     Left = 337
@@ -80,7 +79,6 @@ object frmCadAbastecimento: TfrmCadAbastecimento
     Caption = 'Cancelar'
     TabOrder = 5
     OnClick = btnCancelarClick
-    ExplicitTop = 64
   end
   object cmbBomba: TDBLookupComboBox
     Left = 8

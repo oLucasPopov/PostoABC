@@ -34,7 +34,6 @@ type
     procedure btnCancelarClick(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   private
-    function SomenteNumero(str: string): string;
     procedure Totalizar;
     function ConfirmaCancelamento: Boolean;
     procedure LimparCampos;
@@ -54,15 +53,6 @@ untControllerNovoAbastecimento, untHelpersConversao;
 
 {$R *.dfm}
 
-function TfrmCadAbastecimento.SomenteNumero(str: string): string;
-var
-  x: integer;
-begin
-  Result := '';
-  for x := 0 to Length(str) - 1 do
-    if CharInSet(str.Chars[x], ['0' .. '9']) then
-      Result := Result + str.Chars[x];
-end;
 
 function TfrmCadAbastecimento.ConfirmaCancelamento: Boolean;
 begin
@@ -76,7 +66,7 @@ end;
 
 procedure TfrmCadAbastecimento.edtLitrosChange(Sender: TObject);
 begin
-  edtLitros.Text := TFormatar.Litro(SomenteNumero(edtLitros.Text));
+  edtLitros.Text := TFormatar.Litro(edtLitros.Text);
   edtLitros.SelStart := Length(edtLitros.Text);
 
   Totalizar;
