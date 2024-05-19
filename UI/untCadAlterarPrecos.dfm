@@ -18,9 +18,9 @@ object frmCadAlterarPrecos: TfrmCadAlterarPrecos
   object lblBomba: TLabel
     Left = 8
     Top = 8
-    Width = 32
+    Width = 58
     Height = 13
-    Caption = 'Bomba'
+    Caption = 'Combust'#237'vel'
   end
   object lblPrecoCombustivel: TLabel
     Left = 152
