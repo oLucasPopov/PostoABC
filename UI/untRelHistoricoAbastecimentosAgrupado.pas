@@ -118,6 +118,11 @@ begin
                              ,[FormatDateTime(FORMATO_DATA, dataInicio)
                               ,FormatDateTime(FORMATO_DATA, dataFim)]);
 
+    if (dataInicio = 0) and (dataFim = 0) then
+    begin
+      exit;
+    end;
+
     qryRelatorio.Open('', [dataInicio, dataFim]);
     if qryRelatorio.IsEmpty then
     begin
@@ -183,11 +188,16 @@ begin
   try
     frmSelecionarPeriodo.ShowModal;
     try
-      if not frmSelecionarPeriodo.confirmado then
-        self.Close;
-
-      self.dataInicio := frmSelecionarPeriodo.dataInicio;
-      Self.dataFim    := frmSelecionarPeriodo.dataFim;
+      if frmSelecionarPeriodo.confirmado then
+      begin
+        self.dataInicio := frmSelecionarPeriodo.dataInicio;
+        Self.dataFim    := frmSelecionarPeriodo.dataFim;
+      end
+      else
+      begin
+        self.dataInicio := 0;
+        self.dataFim    := 0;
+      end;
     except
       on E:Exception do
       begin
